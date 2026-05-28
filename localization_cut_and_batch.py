@@ -46,10 +46,10 @@ def downselect_and_batch(allsky_file,out_dir,max_area=100,N_batch=20):
     ## split into smaller chunks for batch submission
     list_of_lists = np.array_split(events_loaded,N_batch)
 
-    batchnums = range(len(list_of_lists))
-    for lst, num in zip(list_of_lists,batchnums):
-        filename = 'allsky_batch'+str(num)+'.txt'
-        batchpath = os.path.join(batch_dir,filename)
+    #batchnums = range(len(list_of_lists))
+    for num, lst in enumerate(list_of_lists):
+        #filename = 'allsky_batch'+str(num)+'.txt'
+        batchpath = os.path.join(batch_dir, 'allsky_batch{}.txt'.format(num))
         lst.to_csv(batchpath,index=False,sep=',')
     
     return
