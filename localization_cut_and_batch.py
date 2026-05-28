@@ -47,7 +47,7 @@ def downselect_and_batch(allsky_file,out_dir,max_area=100,N_batch=20):
     list_of_lists = np.array_split(events_cut,N_batch)
 
     #batchnums = range(len(list_of_lists))
-    for num, lst in enumerate(list_of_lists):
+    for num, chunk in enumerate(list_of_lists):
         #filename = 'allsky_batch'+str(num)+'.txt'
         batchpath = os.path.join(batch_dir, 'allsky_batch{}.txt'.format(num))
         pd.DataFrame(chunk).to_csv(batchpath,index=False,sep=',')
