@@ -26,7 +26,7 @@ python3 ${FOLLOWUP_DIR}/localization_cut_and_batch.py $PARAMS_FILE
 for BATCH_FILE in ${OUTDIR}/batches/*
 do
     echo "Submitting exposure time calculation for batch file ${BATCH_FILE}..."
-    sbatch -u adevashish ${FOLLOWUP_DIR}/sub_max_texp_calc.slurm $PARAMS_FILE $BATCH_FILE $FOLLOWUP_DIR
+    sbatch ${FOLLOWUP_DIR}/sub_max_texp_calc.slurm $PARAMS_FILE $BATCH_FILE $FOLLOWUP_DIR
 done
 
 echo "Done! All jobs submitted."
