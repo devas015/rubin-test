@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=30gb
 #SBATCH --mail-type=FAIL 
-#SBATCH --mail-user=crisw015@umn.edu
+#SBATCH --mail-user=devas015@umn.edu
 #SBATCH -p amdsmall
 #SBATCH -e error.uvex
 #SBATCH -o out.uvex
