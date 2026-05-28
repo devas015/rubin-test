@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1
 #SBATCH --mem=10gb
 #SBATCH --mail-type=FAIL 
-#SBATCH --mail-user=crisw015@umn.edu
+#SBATCH --mail-user=devas015@umn.edu
 #SBATCH -p amdsmall
 #SBATCH -e error.uvex
 #SBATCH -o out.uvex
@@ -16,6 +16,3 @@
 FOLLOWUP_DIR=$3
 
 python3 -u ${FOLLOWUP_DIR}/max-texp-by-sky-loc.py $1 $2
-
-conda deactivate
-
