@@ -8,6 +8,9 @@
 #SBATCH -e error.uvex
 #SBATCH -o out.uvex
 
+source ~/.bashrc
+conda activate m4opt 
+
 ## $1 is params file
 ## $2 is the downselected allsky CSV. At minimum needs to have 'simulation_id', 'area_(90)', and 'distmean' (or 'dist(90)') columns.
 ## $3 is the uvex-followup directory
